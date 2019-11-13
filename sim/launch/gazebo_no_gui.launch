@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="paused" value="false"/>
+      <arg name="world_name" value="$(find sim)/world/world.launch"/>
+      <arg name="gui" value="false"/>
+  </include>
+
+  <arg name="model1" default="$(find sim)/urdf/roku1.urdf" />
+
+  <arg name="yaml1" default="$(find sim)/config/joint1.yaml"/>
+
+  <!--なぜかrobot_descriptionじゃなきゃ通らない-->
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model1)" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 0.0 -model rokusoku1" />
+
+  <rosparam file="$(arg yaml1)" command="load"/>
+  <node name="controller_spawner1" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/rokusoku1" args="
+joint_state_controller
+Joint1_1_position_controller 
+Joint1_2_position_controller 
+Joint1_3_position_controller 
+Joint2_1_position_controller 
+Joint2_2_position_controller 
+Joint2_3_position_controller 
+Joint3_1_position_controller 
+Joint3_2_position_controller 
+Joint3_3_position_controller 
+Joint4_1_position_controller 
+Joint4_2_position_controller 
+Joint4_3_position_controller 
+Joint5_1_position_controller 
+Joint5_2_position_controller 
+Joint5_3_position_controller 
+Joint6_1_position_controller 
+Joint6_2_position_controller 
+Joint6_3_position_controller 
+"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+</launch>

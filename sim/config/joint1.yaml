@@ -1,0 +1,94 @@
+rokusoku1:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 25
+
+  Joint1_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint1_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint1_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint1_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint1_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint1_3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint2_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint2_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint2_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint2_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint2_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint2_3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint3_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint3_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint3_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint3_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint3_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint3_3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint4_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint4_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint4_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint4_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint4_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint4_3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint5_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint5_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint5_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint5_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint5_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint5_3
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint6_1_position_controller:
+    type: velocity_controllers/JointPositionController 
+    joint: Joint6_1
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint6_2_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint6_2
+    pid: {p: 100.0, i: 0, d: 0}
+
+  Joint6_3_position_controller:
+    type: velocity_controllers/JointPositionController
+    joint: Joint6_3
+    pid: {p: 100.0, i: 0, d: 0}
